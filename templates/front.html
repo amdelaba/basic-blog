@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+  	<br><br><br><br>
+	<div class="cache-time">
+		Queried {{cache_time}} seconds ago
+	</div>
+{% endblock %}

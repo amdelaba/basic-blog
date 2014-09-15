@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<table>
+    <tr>
+      <td class="label"> Username </td>
+      <td class="label"> Passhash </td>
+      <td class="label"> Email </td>
+      <td class="label"> Created </td>
+    </tr>
+
+
+  {% for u in users %}
+    <tr>
+      <td> {{u.username}} </td>
+      <td> {{u.pwd_hash}} </td>
+      <td> {{u.email}} </td>
+      <td> {{u.created.strftime("%b %d, %Y")}} </td>
+    </tr>
+    
+  {% endfor %}
+
+
+</table>
+
+{% endblock %}
